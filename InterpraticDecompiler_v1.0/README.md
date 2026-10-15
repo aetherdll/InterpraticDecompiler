@@ -19,7 +19,7 @@
 
 Make sure you have Python installed, then clone the repository and install the required dependencies:
 
-````bash
+```bash
 # Clone the repository
 
 git clone [https://github.com/aetherdll/InterpraticDecompiler.git](https://github.com/aetherdll/InterpraticDecompiler.git)
@@ -33,7 +33,7 @@ Run the tool from your terminal by passing the target binary file:
 
 ```bash
 python InterpraticDecompiler.py <path_to_binary> [options]
-````
+```
 
 Examples
 Basic Analysis:
