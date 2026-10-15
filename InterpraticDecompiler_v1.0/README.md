@@ -24,11 +24,15 @@ Make sure you have Python installed, then clone the repository and install the r
 
 git clone [https://github.com/aetherdll/InterpraticDecompiler.git](https://github.com/aetherdll/InterpraticDecompiler.git)
 cd InterpraticDecompiler
+```
 
 # Install dependencies
-pip install -r requirements.txt
 
-#💻 Usage
+```bash
+pip install -r requirements.txt
+```
+
+# 💻 Usage
 Run the tool from your terminal by passing the target binary file:
 
 ```bash
