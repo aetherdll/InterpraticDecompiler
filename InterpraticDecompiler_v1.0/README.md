@@ -23,7 +23,7 @@ Make sure you have Python installed, then clone the repository and install the r
 # Clone the repository
 
 git clone [https://github.com/aetherdll/InterpraticDecompiler.git](https://github.com/aetherdll/InterpraticDecompiler.git)
-cd InterpraticDecompiler
+cd InterpraticDecompiler/InterpraticDecompiler_v1.0
 ```
 
 # Install dependencies
