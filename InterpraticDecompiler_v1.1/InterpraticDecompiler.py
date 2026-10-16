@@ -49,7 +49,6 @@ def extract_iocs(text_content):
     }
     
     # Regex patterns
-    ip_pattern = r'\b(?deaths?\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\b' # Adjusted safely or standard ip regex
     ip_pattern_safe = r'\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b'
     url_pattern = r'https?://[^\s<>"]+|www\.[^\s<>"]+'
     reg_pattern = r'(?:HKEY_LOCAL_MACHINE|HKEY_CURRENT_USER|HKLM|HKCU)\\[^\s"]+'
@@ -57,7 +56,6 @@ def extract_iocs(text_content):
     
     for line in text_content:
         for ip in re.findall(ip_pattern_safe, line):
-            # Basic validation for IP range
             parts = ip.split('.')
             if all(0 <= int(p) <= 255 for p in parts):
                 iocs["ips"].add(ip)
@@ -382,8 +380,8 @@ def analyze_binary(file_path, outdir, f_mz, f_pe, f_elf, f_mo, f_pecs, f_debugch
     console.print(f"    - {strings_path}")
     console.print(f"    - {imports_path}")
     console.print(f"    - {exports_path}")
-    console.print(f"    - [bold cyan]{ioc_path}[/bold cyan] (Extracted IoCs)")
-    console.print(f"    - [bold cyan]{entropy_path}[/bold cyan] (Entropy Report)")
+    console.print(f"    - {ioc_path} (Extracted IoCs)")
+    console.print(f"    - {entropy_path} (Entropy Report)")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="InterpraticDecompiler - CLI Binary Analysis Tool v1.1")
